@@ -15,13 +15,51 @@
             <h1>Welcome to Pizza Tower</h1>
             <h2>Serving the Greater Puget Sound for 25 Years</h2>
             <hr>
-            <p>Careful now</p>
-            <a id = "contact-button" href = "#" role = "button">Place an Order Today!</a>
+            <p>Watch out for falling pillars</p>
+            <a id = "contact-button" href = "#" role = "button">Contact Our Team Today!</a>
         </header>
+
+        <form id = "pizza-form" action = "#" method = "get">
+
+            <fieldset>
+                <legend>Contact Info</legend>
+                <label for = "first-name">First Name:</label>
+                <input type = "text" id = "first-name" name = "first-name">
+                <label for = "last-name">Last Name:</label>
+                <input type = "text" id = "last-name" name = "last-name">
+                <label for = "email-address">Email Address:</label>
+                <input type = "text" id = "email-address" name = "email-address">
+            </fieldset>
+
+            <fieldset>
+                <legend>Pickup or Delivery</legend>
+                <label for = "pickup">
+                    <input type = "radio" id = "pickup" value = "pickup" name = "method">Pickup
+                </label>
+                <label for = "delivery">
+                    <input type = "radio" id = "delivery" value = "delivery" name = "method">Delivery
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Pizza Size</legend>
+                <label for = "small">
+                    <input type = "radio" id = "small" value = "small" name = "size">Small
+                </label>
+                <label for = "medium">
+                    <input type = "radio" id = "medium" value = "medium" name = "size">Medium
+                </label>
+                <label for = "large">
+                    <input type = "radio" id = "large" value = "large" name = "size">Large
+                </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Toppings</legend>
+            </fieldset>
+
+            <button type = "submit" id = "order-button">Place Order</button>
+        </form>
     </main>
-
-    <form>
-
-    </form>
 </body>
 </html>
