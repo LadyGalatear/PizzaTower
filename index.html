@@ -43,15 +43,13 @@
 
             <fieldset>
                 <legend>Pizza Size</legend>
-                <label for = "small">
-                    <input type = "radio" id = "small" value = "small" name = "size">Small
-                </label>
-                <label for = "medium">
-                    <input type = "radio" id = "medium" value = "medium" name = "size">Medium
-                </label>
-                <label for = "large">
-                    <input type = "radio" id = "large" value = "large" name = "size">Large
-                </label>
+                <select id = "size" name = "size">
+                    <option value = "none">--- Select a size ---</option>
+                    <option value = "small">Small</option>
+                    <option value = "medium">Medium</option>
+                    <option value = "large">Large</option>
+                    <option value = "extra-large">Extra Large</option>
+                </select>
             </fieldset>
 
             <fieldset>
@@ -77,6 +75,14 @@
                     Extra Cheese
                 </label>
             </fieldset>
+
+            <label for = "comment">Comments:</label>
+            <textarea rows = "4" id = "comment" name = "comment"></textarea>
+
+            <label for = "sign-up">
+                <input type = "checkbox" id = "sign-up" name = "sign-up" checked>
+                Add me to the discount email list!
+            </label>
 
             <button type = "submit" id = "order-button">Place Order</button>
         </form>
