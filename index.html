@@ -23,11 +23,23 @@
         <form id = "pizza-form" action = "#" method = "get">
             <fieldset>
                 <legend>Contact Info</legend>
-                <label for = "first-name">First Name:</label>
+                <label for = "first-name">First Name:
+                    <span class = "err" id = "err-first-name">
+                        First name is required.
+                    </span>
+                </label>
                 <input type = "text" id = "first-name" name = "first-name">
-                <label for = "last-name">Last Name:</label>
+                <label for = "last-name">Last Name:
+                    <span class = "err" id = "err-last-name">
+                        Last name is required.
+                    </span>
+                </label>
                 <input type = "text" id = "last-name" name = "last-name">
-                <label for = "email-address">Email Address:</label>
+                <label for = "email-address">Email Address:
+                    <span class = "err" id = "err-email">
+                        Email address is required.
+                    </span>
+                </label>
                 <input type = "text" id = "email-address" name = "email-address">
             </fieldset>
 
