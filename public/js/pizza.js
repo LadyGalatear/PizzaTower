@@ -2,6 +2,7 @@ document.getElementById("pizza-form").onsubmit = () => {
     clearErrors();
 
     let isValid = true;
+    
     // Validate first name
     let first_name = document.getElementById("first-name").value.trim();
     if(!first_name) {
