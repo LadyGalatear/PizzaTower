@@ -33,7 +33,26 @@ app.get('/thank-you', (req, res) => {
 
 // Confirmation route
 app.post('/submit-order', (req, res) => {
-    res.send("Your order has been submitted!");
+    const order = {
+        first_name: req.body['first-name'],
+        last_name: req.body['last-name'],
+        email_address: req.body['email-address'],
+        method: req.body.method,
+        size: req.body.size,
+        toppings: req.body.toppings ? req.body.toppings : "none",
+        comment: req.body.comment,
+        timestamp: new Date()
+    };
+
+    orders.push(order);
+    //res.send(orders);
+
+    res.sendFile(`${import.meta.dirname}/views/confirmation.html`);
+});
+
+// Admin route
+app.get('/admin', (req, res) => {
+    res.send(orders);
 })
 
 // Start server and listen on port
