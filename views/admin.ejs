@@ -4,6 +4,9 @@
     <meta charset = "UTF-8">
     <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
     <title>It's a secret to everybody.</title>
+    <script src = "//code.jquery.com/jquery-3.7.1.js"></script>
+    <script src = "//cdn.datatables.net/2.3.7/js/dataTables.js"></script>
+    <link rel = "stylesheet" href = "//cdn.datatables.net/2.3.7/css/dataTables.dataTables.css" />
 </head>
 <body>
     <h1>Order Summary</h1>
@@ -35,5 +38,9 @@
             <% }) %>
         </tbody>
     </table>
+
+    <script defer>
+        let table = new DataTable('#order-table');
+    </script>
 </body>
 </html>
