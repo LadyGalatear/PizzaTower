@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+</head>
+<body>
+    <h1>Your order has been processed, <%= order.first_name %>!</h1>
+    <h2>Order Details</h2>
+    <p>Date & Time: <%= order.timestamp %></p>
+    <p>Name: <%= order.first_name %> <%= order.last_name %></p>
+    <p>Email: <%= order.email_address %></p>
+    <p>Pickup or Delivery?: <%= order.method %></p>
+    <p>Size: <%= order.size %></p>
+    <p>Toppings: 
+        <%= Array.isArray(order.toppings) ?
+            order.toppings.join(', ') :
+            "None" %>
+    <p>Comment: <%= order.comment %></p>
+    <a href = "/">Return to the order form.</a>
+    <p><a href ="/admin">(Don't go here.)</a></p>
+</body>
+</html>
