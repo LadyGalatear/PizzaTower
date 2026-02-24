@@ -6,8 +6,34 @@
     <title>It's a secret to everybody.</title>
 </head>
 <body>
-    <% orders.forEach(order => { %>
-        <p>Order</p>
-    <% }) %>
+    <h1>Order Summary</h1>
+    <table id = "order-table" class = "display">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Method</th>
+                <th>Size</th>
+                <th>Toppings</th>
+                <th>Comment</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% orders.forEach(order => { %>
+                <tr>
+                    <td><%= order.timestamp.toLocaleString() %></td>
+                    <td><%= order.first_name %> <%= order.last_name %></td>
+                    <td><%= order.email_address %></td>
+                    <td><%= order.method %></td>
+                    <td><%= order.size %></td>
+                    <td><%= Array.isArray(order.toppings) ?
+                        order.toppings.join(', ') :
+                        "None" %></td>
+                    <td><%= order.comment %></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
 </body>
 </html>

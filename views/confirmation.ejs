@@ -8,7 +8,7 @@
 <body>
     <h1>Your order has been processed, <%= order.first_name %>!</h1>
     <h2>Order Details</h2>
-    <p>Date & Time: <%= order.timestamp %></p>
+    <p>Date & Time: <%= order.timestamp.toLocaleString() %></p>
     <p>Name: <%= order.first_name %> <%= order.last_name %></p>
     <p>Email: <%= order.email_address %></p>
     <p>Pickup or Delivery?: <%= order.method %></p>
