@@ -68,3 +68,7 @@ input[type = "text"], textarea, select {
     color: darkred;
     display: none;
 }
+
+#header-headline {
+    align-content: center;
+}
