@@ -6,11 +6,10 @@
     <title>Thank You</title>
 </head>
 <body>
-    <h1>Your order has been processed, <%= order.first_name %>!</h1>
+    <h1>Your order has been processed, <%= order['first-name'] %>!</h1>
     <h2>Order Details</h2>
-    <p>Date & Time: <%= order.timestamp.toLocaleString() %></p>
-    <p>Name: <%= order.first_name %> <%= order.last_name %></p>
-    <p>Email: <%= order.email_address %></p>
+    <p>Name: <%= order['first-name'] %> <%= order['last-name'] %></p>
+    <p>Email: <%= order['email-address'] %></p>
     <p>Pickup or Delivery?: <%= order.method %></p>
     <p>Size: <%= order.size %></p>
     <p>Toppings: 

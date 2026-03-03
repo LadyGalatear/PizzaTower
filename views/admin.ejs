@@ -30,9 +30,7 @@
                     <td><%= order.email_address %></td>
                     <td><%= order.method %></td>
                     <td><%= order.size %></td>
-                    <td><%= Array.isArray(order.toppings) ?
-                        order.toppings.join(', ') :
-                        "None" %></td>
+                    <td><%= order.toppings %></td>
                     <td><%= order.comment %></td>
                 </tr>
             <% }) %>
