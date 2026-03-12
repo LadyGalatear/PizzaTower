@@ -4,8 +4,8 @@ import express from 'express';
 // Import the mysql2 module
 // mysql2 allows Node.js to communicate with a MySQL database
 import mysql2 from 'mysql2';
-
 import dotenv from 'dotenv';
+import {validateForm} from './validation.js';
 
 // Load environment variables from .env file
 // This MUST be called before accessing process.env
@@ -96,6 +96,13 @@ app.get('/thank-you', (req, res) => {
 app.post('/submit-order', async(req, res) => {
 
     const order = req.body;
+
+    const valid = validateForm(order);
+    if (!valid.isValid) {
+        console.log(valid);
+        res.render('home', {errors: valid.errors});
+        return;
+    }
 
     const params = [
         order['first-name'],
